@@ -9,13 +9,13 @@ npm i
 ## To build the project
 
 ```
-gulp gulp:build
+gulp build
 ```
 
 ## To remove build folder
 
 ```
-gulp gulp:clean
+gulp clean
 ```
 
 ## To build and init watcher and browser-sync
