@@ -1,0 +1,33 @@
+.footer
+	margin-top 100px
+	
+	+sm()
+		margin-top 30px
+	
+	&__top
+	&__middle
+	&__bottom
+		display flex
+		justify-content space-between
+		align-items center
+		padding 30px
+		
+		+sm()
+			flex-direction column
+			
+	&__top
+		padding 10px 30px
+		border-top 1px solid $border-color
+		
+		+sm()
+			padding 0
+			
+	&__middle
+		border-bottom 1px solid $border-color
+		
+@import 'subscribe-form'
+@import 'footer-links'
+@import 'footer-nav'
+@import 'socials'
+@import 'cards'
+@import 'copy'

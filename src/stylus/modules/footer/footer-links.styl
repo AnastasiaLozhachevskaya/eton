@@ -1,0 +1,22 @@
+.footer-links
+	display flex
+	font-family $secondary-font
+	font-weight 500
+	font-size 17px
+	
+	+sm()
+		width 100%
+		display flex
+		justify-content center
+		border-bottom 1px solid $border-color
+		margin-bottom 30px
+	
+	&__item
+		margin-right 30px
+		padding 20px 0
+		
+		&:last-child
+			margin-right 0
+			
+		&:hover
+			text-decoration underline

@@ -1,0 +1,29 @@
+.main-nav
+	display flex
+	
+	+xs()
+		justify-content space-between
+	
+	&__link
+		display block
+		font-family $secondary-font
+		text-transform uppercase
+		font-weight 700
+		font-size 17px
+		padding 11px 0
+		margin-right 20px
+		letter-spacing 1.5px
+		
+		&:last-child
+			margin-right 0
+			
+		.header.opened &
+			color rgba($white, .2)
+			
+			&.active
+				color rgba($white, .9)
+			
+
+		+sm()
+			padding 8px 0
+			font-size 13px

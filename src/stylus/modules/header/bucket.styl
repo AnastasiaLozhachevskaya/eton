@@ -1,0 +1,29 @@
+.bucket
+	display flex
+	align-items center
+	transition 180ms ease-in-out
+	
+	.opened &
+		color rgba($white, .8)
+	
+	&__icon
+		width 20px
+		
+		+xs()
+			width 15px
+		
+	&__content
+		font-family $secondary-font
+		text-transform uppercase
+		margin-left 10px
+		font-weight 500
+		
+		+xs()
+			font-size 14px
+		
+	&__svg
+		fill #231f20
+		transition 180ms ease-in-out
+		
+		.opened &
+			fill rgba($white, .8)

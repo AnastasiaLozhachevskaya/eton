@@ -1,0 +1,27 @@
+.hero
+	display flex
+	padding-top 89px
+	
+	+sm()
+		flex-direction column
+		padding-top 69px
+	
+	&__img-container
+		flex 2
+		display flex
+		
+	&__img
+		width 100%
+		
+	&__content
+		@extends .fl-center
+		flex 1
+		padding 20px $gutter 40px
+		flex-direction column
+		text-align center
+		
+		+sm()
+			padding 20px $sm-gutter 40px
+		
+	&__btn
+		margin-top 30px

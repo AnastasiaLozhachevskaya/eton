@@ -1,0 +1,86 @@
+.header
+	position fixed
+	width 100%
+	box-sizing border-box
+	left 0
+	top 0
+	background-color $white
+	transition 180ms ease-in-out
+		
+	&__top
+		display flex
+		justify-content space-between
+		align-items center
+		height 50px
+		position relative
+		z-index 5
+		background-color $white
+		
+		+sm()
+			height 40px
+			
+		&:after
+			content ''
+			width calc(100% - 60px)
+			height 1px
+			background-color $border-color
+			bottom 0
+			left 30px
+			position absolute
+
+			+sm()
+				width calc(100% - 30px)
+				left 15px
+			
+	&__top
+	&__nav
+		padding 0 $gutter
+
+		+sm()
+			padding 0 ($gutter / 2)
+			
+	&__nav
+		position absolute
+		width 100%
+		box-sizing border-box
+		transform translateY(-60px)
+		background-color $white
+		transition 180ms transform ease-out, 180ms background-color
+		box-shadow $shadow
+		
+		+sm()
+			box-shadow none
+		
+			
+	&.opened
+		& .header__top
+			&:after
+				background-color rgba($white, .3)
+			
+		& .header__top
+		& .header__nav
+			background-color $primary-blue
+			
+		& .header__nav
+			transform translateY(0px)
+			background-color $primary-blue	
+			box-shadow none
+			
+		& .search-form
+			animation 250ms slideDown 100ms ease-out forwards
+			
+@keyframes slideDown
+	0%
+		transform translateY(-60px)
+		opacity 0
+		visibility hidden
+		
+	100%
+		transform translateY(0)
+		opacity 1
+		visibility visible
+	
+@import 'search-form'
+@import 'main-nav'
+@import 'logo'
+@import 'bucket'

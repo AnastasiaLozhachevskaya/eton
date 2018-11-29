@@ -1,0 +1,37 @@
+.search-form
+	width 100%
+	max-width 300px
+	position relative
+	padding 10px 0
+	opacity 0
+	visibility hidden
+	
+	&__field
+		width 100%
+		padding 0 15px 0 40px
+		box-sizing border-box
+		background-color $dark-blue
+		border 0
+		display block
+		height 40px
+		color rgba($white, .9)
+		font-family $secondary-font
+		font-size 16px
+		
+		&:focus
+			outline 0
+		
+	&__btn
+		position absolute
+		top 0
+		bottom 0
+		left 10px
+		margin auto
+		background-color transparent
+		height 20px
+		width 20px
+		border 0
+		padding 0
+		
+	&__svg
+		fill rgba($white, .9)
